@@ -33,22 +33,39 @@ class ofApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);*/
 		
 		//ofVideoPlayer gakuchoMovie;
-		ofVideoGrabber vidGrabber;
 		ofPixels videoInverted;
 		ofTexture videoTexture;
 		
+		
+		//void load(std::string gakuchomovie);
+		vector<ofxHapPlayer*> premovies;
+		ofxHapPlayer gakuchoMovie,gakuku,finger,dancing;
+		ofxHapPlayer part[5];
+
+
+		//camera
+
 		int camWidth;
 		int camHeight;
 
-		//void load(std::string gakuchomovie);
-		ofxHapPlayer gakuchoMovie;
-		ofxHapPlayer gakuku,finger,dancing;
+		ofVideoGrabber cam[3];
 
-		ofPoint remoteMouse;
-		float in1,in2,Alpha0,Alpha1,Alpha2,Alpha3,Alpha4,yeahhh;
 
 		void dumpOSC(ofxOscMessage m);
 
+		float Alpha[4];
+		float Alpha0, Alpha1, Alpha2, Alpha3, Alpha4;
 		
+
+		int partnumber_r = 0;
+		int partnumber_l = 0;
+
+		int camnumber_r = 0;
+		int camnumber_l = 0;
+
+		int alpha_r = 0;
+		int alpha_l = 0;
+
+	
 
 };
